@@ -4,18 +4,22 @@ import hand_icon from '../Assets/hand_icon.png'
 import arrow_icon from '../Assets/arrow.png'
 import hero_imae from '../Assets/hero_image.png'
 function Hero() {
+    const scrollToNewCollections = () => {
+        const newCollectionsElement = document.getElementById("newCollections");
+        newCollectionsElement.scrollIntoView({ behavior: "smooth" });
+    };
   return (
     <div className='hero'>
         <div className="hero-left">
-            <h2>NEEW ARRIVALS ONLY</h2>
+            <h2>E-Commerce</h2>
             <div className='hero-hand-icon'>
-                <p>new</p>
-                <img src={hand_icon} alt="" />
+                <p>New</p>
+                {/* <img src={hand_icon} alt="" /> */}
             </div>
             <p>collection</p>
-            <p>collection for everyone</p>
+            <p>UP TO 50% OFF FRESH FINDS</p>
         
-        <div className="hero-latest-btn">
+        <div className="hero-latest-btn" onClick={scrollToNewCollections}>
             <div>Latest collection</div>
             <img src={arrow_icon} alt="" />
         </div>
